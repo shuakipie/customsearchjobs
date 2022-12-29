@@ -1,0 +1,174 @@
+.igj_field_filter{
+    width: 90%;
+    height: 30px;
+}
+
+.single-job #footer-outer{
+    position: static !important;
+}
+.archive .border-round{
+    border: 2px solid #333;
+    padding: 20px;
+
+}
+.space{
+    margin-bottom: 40px;
+}
+.job_single{
+    padding: 30px 90px !important;
+}
+
+a.apply-link{
+     background: #fe0200;
+     color: #FFF;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#footer-outer{
+    position: static !important;
+}
+
+.igj-container{
+    margin-top: 50px;
+}
+
+.igj_filters{
+    width: 30%;
+    padding-right: 50px;
+}
+
+.igj_jobs{
+    width: 65%;
+    display: inline-block;
+}
+
+.igj-container > .igj-wrapper{
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+}
+
+.igj_pagination li{
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 5px 12px;
+    font-weight: bold;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.igj_pagination-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_reference{
+    float: right;
+    color: lightgrey;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.page-item.active{
+    background: #fe0200;;
+}
+
+.igj_jobs p.post_content, .job_single p {
+    text-align: justify;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.job-content p:last-child{
+    display: none !important;
+}
+
+#get_jobs_btn{
+    margin-top: 15px;
+    background: #fe0200;
+    color: white;
+    border: 1px solid white;
+    font-weight: bold;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.igj-highlight-term{
+    background: lightyellow;
+}
+
+.filter-ordering .fancy-select-wrap{
+    width: 200px;
+    float: right;
+}
+
+#current_location{
+    margin-top: 20px;
+}
+
+.current_location_label{
+    font-size: 14px;
+}
+
+.job-result-wrapper {
+    width: 100%;
+    height: 200px;
+    background: black;
+    position: absolute;
+    z-index: 9;
+    color: white;
+    border-radius: 5px;
+}
+
+.job-result-wrapper p.job-suggestion{
+    font-size: 15px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.job-meta{
+    margin-right: 15px;
+}
+
+.es_area.col-4{
+    width: 30%;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+.es_area.col-4 a:hover{
+    color: black;
+}
+
+.es_area .area-wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: #fe0200;
+    border-bottom: 1px solid #fe0200;
+    padding-bottom: 10px;
+}
+
+.row.all_areas{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.all_areas_btn{
+    background: white;
+    color: #fe0200;
+    border: 1px solid #fe0200;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.all_areas_btn:hover{
+    color: white;
+    background: #fe0200;
+}

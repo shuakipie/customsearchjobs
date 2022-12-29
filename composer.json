@@ -1,0 +1,17 @@
+{
+    "name": "dev/inergroup_jobs",
+    "autoload": {
+        "psr-4": {
+            "Igj\\Inc\\": "./inc"
+        }
+    },
+    "authors": [
+        {
+            "name": "yarielg",
+            "email": "yariel.gordillo@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
