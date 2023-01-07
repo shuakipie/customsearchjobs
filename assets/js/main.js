@@ -4,7 +4,7 @@ jQuery( function( $ ) {
         $job_section: $('.igj_jobs'),
         $pagination_section: $('.igj_pagination'),
         page: 1,
-        length: 10,
+        length: 5,
         jobsTotal: 0,
         $cities: $('#igj_cities'),
         $states: $('#igj_states'),
@@ -15,7 +15,7 @@ jQuery( function( $ ) {
         $current_location: $('#current_location'),
         init: function () {
 
-            this.getJobs(10, 0, 1);
+            this.getJobs(5, 0, 1);
             $('.igj_pagination').on('click', '.page-item', this.pageNavigation);
 
             this.$get_jobs_btn.on('click', this.getJobsReload);
@@ -175,17 +175,29 @@ jQuery( function( $ ) {
 
         },
         pagination: function(){
+		igj_jobs.$pagination_section.empty();
 
-            igj_jobs.$pagination_section.empty();
+		let currentPage = parseInt(igj_jobs.page);
+		let totalPages = Math.ceil(parseInt(igj_jobs.jobsTotal)/parseInt(igj_jobs.length));
 
-            let totalPages = Math.ceil(parseInt(igj_jobs.jobsTotal)/parseInt(igj_jobs.length));
+		// Add the previous button
+		let previousButton = '<li data-page="' + (currentPage - 1) + '" class="page-item previous"><span class="page-link">Previous</span></li>';
+		igj_jobs.$pagination_section.append(previousButton);
 
-            for(let i = 1; i <= totalPages; i++){
-                let active =  i === parseInt(igj_jobs.page) ? 'active' : '';
-                igj_jobs.$pagination_section.append('<li data-page="'+ i +'" class="page-item ' + active + ' page-' + i +'"><span class="page-link">' + i +'</span></li>');
-            }
+		// Add the page items
+		for(let i = currentPage - 2; i <= currentPage + 2; i++) {
+		if (i < 1 || i > totalPages) {
+			continue;
+		}
 
-        },
+		let active =  i === currentPage ? 'active' : '';
+		igj_jobs.$pagination_section.append('<li data-page="'+ i +'" class="page-item ' + active + ' page-' + i +'"><span class="page-link">' + i +'</span></li>');
+		}
+
+		// Add the next button
+		let nextButton = '<li data-page="' + (currentPage + 1) + '" class="page-item next"><span class="page-link">Next</span></li>';
+		igj_jobs.$pagination_section.append(nextButton);
+		},
         getJobs: function () {
             $.ajax({
                 type: 'POST',
